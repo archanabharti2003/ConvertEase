@@ -2,11 +2,11 @@ const express = require("express");
 const multer = require("multer");
 const docxToPDF = require("docx-pdf");
 const path = require("path");
-
+const cors = require("cors");
 const app = express();
 const port = 3000;
 
-
+app.use(cors());
 
 // settting up the file storage
 const storage = multer.diskStorage({
